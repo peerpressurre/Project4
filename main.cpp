@@ -8,7 +8,6 @@ using namespace std;
 
 int main()
 {
-
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -47,7 +46,7 @@ int main()
             SetConsoleTextAttribute(hConsole, 14);
             cout << "Exercise 3";
             SetConsoleTextAttribute(hConsole, 11);
-            cout << "            |" << endl;
+            cout << "           |" << endl;
 
             //-------------------end line------------------
             SetConsoleTextAttribute(hConsole, 11);
@@ -59,6 +58,7 @@ int main()
         SetConsoleTextAttribute(hConsole, 12);
         std::cin >> operation;
         SetConsoleTextAttribute(hConsole, 11);
+        system("cls");
         switch (operation)
         {
         case 0:
@@ -87,7 +87,7 @@ int main()
             SetConsoleTextAttribute(hConsole, 15);
             std::cin >> c;
             SetConsoleTextAttribute(hConsole, 11);
-            std::cout << "Forth score->"; 
+            std::cout << "Forth score->";
             SetConsoleTextAttribute(hConsole, 15);
             std::cin >> d;
             SetConsoleTextAttribute(hConsole, 11);
@@ -99,7 +99,7 @@ int main()
 
             if (res > 4)
             {
-                cout << "Congratulations\!You\'re admitted to the examination";
+                cout << "Congratulations\! You\'re admitted to the examination" << endl;
             }
             else
             {
@@ -118,7 +118,7 @@ int main()
             SetConsoleTextAttribute(hConsole, 15);
             std::cin >> num;
             SetConsoleTextAttribute(hConsole, 11);
-            if (num & 2 == 0)
+            if (num % 2 == 0)
             {
                 cout << num << "* 3 = " << num * 3;
             }
@@ -134,6 +134,51 @@ int main()
         {
             SetConsoleTextAttribute(hConsole, 15);
             cout << "Завдання 3\. Написати програму-калькулятор\. Користувач вводить два числа і вибирає арифметичну дію\. Вивести на екран результат\." << endl;
+
+            //-------------------line 0------------------
+            SetConsoleTextAttribute(hConsole, 11);
+            cout << "|-------";
+            SetConsoleTextAttribute(hConsole, 14);
+            cout << "CHOOSE OPERATION";
+            SetConsoleTextAttribute(hConsole, 11);
+            cout << "-------| " << endl;
+
+            //-------------------line 1------------------
+            SetConsoleTextAttribute(hConsole, 11);
+            cout << "|         ";
+            SetConsoleTextAttribute(hConsole, 14);
+            cout << "1 - Addition";
+            SetConsoleTextAttribute(hConsole, 11);
+            cout << "         |" << endl;
+
+            //-------------------line 2------------------
+            SetConsoleTextAttribute(hConsole, 11);
+            cout << "|         ";
+            SetConsoleTextAttribute(hConsole, 14);
+            cout << "2 - Substraction";
+            SetConsoleTextAttribute(hConsole, 11);
+            cout << "     |" << endl;
+
+            //-------------------line 3------------------
+            SetConsoleTextAttribute(hConsole, 11);
+            cout << "|         ";
+            SetConsoleTextAttribute(hConsole, 14);
+            cout << "3 - Multiplication";
+            SetConsoleTextAttribute(hConsole, 11);
+            cout << "   |" << endl;
+
+            //-------------------line 4------------------
+            SetConsoleTextAttribute(hConsole, 11);
+            cout << "|         ";
+            SetConsoleTextAttribute(hConsole, 14);
+            cout << "4 - Division";
+            SetConsoleTextAttribute(hConsole, 11);
+            cout << "         |" << endl;
+
+            //-------------------end line------------------
+            SetConsoleTextAttribute(hConsole, 11);
+            cout << "|------------------------------|" << endl;
+
             SetConsoleTextAttribute(hConsole, 11);
             int num1, num2;
             std::cout << "Enter first number->";
@@ -144,71 +189,35 @@ int main()
             SetConsoleTextAttribute(hConsole, 15);
             std::cin >> num2;
             SetConsoleTextAttribute(hConsole, 11);
-
-            //-------------------line 0------------------
-            SetConsoleTextAttribute(hConsole, 11);
-            cout << "|------------";
-            SetConsoleTextAttribute(hConsole, 14);
-            cout << "CHOOSE OPERATION";
-            SetConsoleTextAttribute(hConsole, 11);
-            cout << "-------------| " << endl;
-
-            //-------------------line 1------------------
-            SetConsoleTextAttribute(hConsole, 11);
-            cout << "|         ";
-            SetConsoleTextAttribute(hConsole, 14);
-            cout << "1 - Addition";
-            SetConsoleTextAttribute(hConsole, 11);
-            cout << "           |" << endl;
-
-            //-------------------line 2------------------
-            SetConsoleTextAttribute(hConsole, 11);
-            cout << "|         ";
-            SetConsoleTextAttribute(hConsole, 14);
-            cout << "2 - Substraction";
-            SetConsoleTextAttribute(hConsole, 11);
-            cout << "           |" << endl;
-
-            //-------------------line 3------------------
-            SetConsoleTextAttribute(hConsole, 11);
-            cout << "|         ";
-            SetConsoleTextAttribute(hConsole, 14);
-            cout << "3 - Multiplication";
-            SetConsoleTextAttribute(hConsole, 11);
-            cout << "            |" << endl;
-
-            //-------------------line 4------------------
-            SetConsoleTextAttribute(hConsole, 11);
-            cout << "|         ";
-            SetConsoleTextAttribute(hConsole, 14);
-            cout << "4 - Division";
-            SetConsoleTextAttribute(hConsole, 11);
-            cout << "            |" << endl;
-
-            //-------------------end line------------------
-            SetConsoleTextAttribute(hConsole, 11);
-            cout << "|------------------------------|" << endl;
-
-
-            if (num3 > 0)
-            {
-                std::cout << "The number is positive" << endl;
-            }
-            else if (num3 < 0)
-            {
-                std::cout << "The number is negative" << endl;
-            }
-            else
-            {
-                std::cout << "The number equals 0" << endl;
-
-            }
             system("pause");
 
-        }break;
+            uint16_t switch_on;
+            switch (switch_on)
+            {
+            case 1:
+            {
+                cout << num1 << " + " << num2 << " = " << num1 + num2;
+            }break;
+
+            case 2:
+            {
+                cout << num1 << " - " << num2 << " = " << num1 - num2;
+            }break;
+
+            case 3:
+            {
+                cout << num1 << " * " << num2 << " = " << num1 * num2;
+            }break;
+
+            case 4:
+            {
+                cout << num1 << " / " << num2 << " = " << num1 / num2;
+            }break;
+
+            }break;
         }
 
-    } while (true);
+        } while (true);
 
-    return 0;
+	return 0;
 }
