@@ -156,8 +156,6 @@ int main()
             SetConsoleTextAttribute(hConsole, 11);
             if (a < b)
             {
-            
-
                 std::cout << ">>>";
                 SetConsoleTextAttribute(hConsole, 12);
                 std::cout << a << b << endl;
