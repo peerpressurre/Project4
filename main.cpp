@@ -54,8 +54,8 @@ int main()
         }
 
         uint16_t operation;
-        std::cout << "Chose excercise->";
-        SetConsoleTextAttribute(hConsole, 12);
+        std::cout << "Chose excercise-> ";
+        SetConsoleTextAttribute(hConsole, 15);
         std::cin >> operation;
         SetConsoleTextAttribute(hConsole, 11);
         system("cls");
@@ -120,11 +120,15 @@ int main()
             SetConsoleTextAttribute(hConsole, 11);
             if (num % 2 == 0)
             {
-                cout << num << "* 3 = " << num * 3;
+                SetConsoleTextAttribute(hConsole, 15);
+                cout << num << " * 3 = " << num * 3 << endl;
+                SetConsoleTextAttribute(hConsole, 11);
             }
             else
             {
-                cout << num << "/ 2 = " << num / 2 << endl;
+                SetConsoleTextAttribute(hConsole, 15);
+                cout << num << " / 2 = " << num / 2 << endl;
+                SetConsoleTextAttribute(hConsole, 11);
 
             }
             system("pause");
@@ -138,7 +142,7 @@ int main()
             //-------------------line 0------------------
             SetConsoleTextAttribute(hConsole, 11);
             cout << "|-------";
-            SetConsoleTextAttribute(hConsole, 14);
+            SetConsoleTextAttribute(hConsole, 15);
             cout << "CHOOSE OPERATION";
             SetConsoleTextAttribute(hConsole, 11);
             cout << "-------| " << endl;
@@ -146,7 +150,7 @@ int main()
             //-------------------line 1------------------
             SetConsoleTextAttribute(hConsole, 11);
             cout << "|         ";
-            SetConsoleTextAttribute(hConsole, 14);
+            SetConsoleTextAttribute(hConsole, 15);
             cout << "1 - Addition";
             SetConsoleTextAttribute(hConsole, 11);
             cout << "         |" << endl;
@@ -154,7 +158,7 @@ int main()
             //-------------------line 2------------------
             SetConsoleTextAttribute(hConsole, 11);
             cout << "|         ";
-            SetConsoleTextAttribute(hConsole, 14);
+            SetConsoleTextAttribute(hConsole, 15);
             cout << "2 - Substraction";
             SetConsoleTextAttribute(hConsole, 11);
             cout << "     |" << endl;
@@ -162,7 +166,7 @@ int main()
             //-------------------line 3------------------
             SetConsoleTextAttribute(hConsole, 11);
             cout << "|         ";
-            SetConsoleTextAttribute(hConsole, 14);
+            SetConsoleTextAttribute(hConsole, 15);
             cout << "3 - Multiplication";
             SetConsoleTextAttribute(hConsole, 11);
             cout << "   |" << endl;
@@ -170,7 +174,7 @@ int main()
             //-------------------line 4------------------
             SetConsoleTextAttribute(hConsole, 11);
             cout << "|         ";
-            SetConsoleTextAttribute(hConsole, 14);
+            SetConsoleTextAttribute(hConsole, 15);
             cout << "4 - Division";
             SetConsoleTextAttribute(hConsole, 11);
             cout << "         |" << endl;
@@ -179,41 +183,60 @@ int main()
             SetConsoleTextAttribute(hConsole, 11);
             cout << "|------------------------------|" << endl;
 
+            uint16_t switch_on;
+            cout << "Choose arithmetic operation: ";
+            SetConsoleTextAttribute(hConsole, 15);
+            cin >> switch_on; 
+
             SetConsoleTextAttribute(hConsole, 11);
             int num1, num2;
-            std::cout << "Enter first number->";
+            std::cout << "Enter first number-> ";
             SetConsoleTextAttribute(hConsole, 15);
             std::cin >> num1;
             SetConsoleTextAttribute(hConsole, 11);
-            std::cout << "Enter second number->";
+            std::cout << "Enter second number-> ";
             SetConsoleTextAttribute(hConsole, 15);
             std::cin >> num2;
             SetConsoleTextAttribute(hConsole, 11);
-            system("pause");
+            /*system("pause");*/
 
-            uint16_t switch_on;
-            cout << "Enter: ";
-            cin >> switch_on;
+
             switch (switch_on)
             {
             case 1:
             {
-                cout << num1 << " + " << num2 << " = " << num1 + num2;
+                cout << ">>> ";
+                SetConsoleTextAttribute(hConsole, 15);
+                cout << num1 << " + " << num2 << " = " << num1 + num2 << endl;
+                SetConsoleTextAttribute(hConsole, 11);
+                system("pause");
             }break;
 
             case 2:
             {
-                cout << num1 << " - " << num2 << " = " << num1 - num2;
+                cout << ">>> ";
+                SetConsoleTextAttribute(hConsole, 15);
+                cout << num1 << " - " << num2 << " = " << num1 - num2 << endl;
+                SetConsoleTextAttribute(hConsole, 11);
+                system("pause");
             }break;
 
             case 3:
             {
-                cout << num1 << " * " << num2 << " = " << num1 * num2;
+                cout << ">>> ";
+                SetConsoleTextAttribute(hConsole, 15);
+                cout << num1 << " * " << num2 << " = " << num1 * num2 << endl;
+                SetConsoleTextAttribute(hConsole, 11);
+                system("pause");
             }break;
 
             case 4:
             {
-                cout << num1 << " / " << num2 << " = " << num1 / num2;
+                cout << ">>> ";
+                SetConsoleTextAttribute(hConsole, 15);
+                cout << num1 << " / " << num2 << " = " << num1 / num2 << endl;
+                SetConsoleTextAttribute(hConsole, 11);
+                system("pause");
             }break;
 
             }break;
