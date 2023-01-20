@@ -111,7 +111,7 @@ int main()
         case 2:
         {
             SetConsoleTextAttribute(hConsole, 15);
-            cout << "Завдання 2\: Користувач вводить з клавіатури число\.Якщо воно парне\, помножити його на три\, інакше \— поділити на два\. Результат вивести на екран\." << endl;
+            cout << "Завдання 2: Користувач вводить з клавіатури число.Якщо воно парне, помножити його на три, інакше — поділити на два. Результат вивести на екран." << endl;
             SetConsoleTextAttribute(hConsole, 11);
             int num;
             std::cout << "Enter a number->";
@@ -192,6 +192,8 @@ int main()
             system("pause");
 
             uint16_t switch_on;
+            cout << "Enter: ";
+            cin >> switch_on;
             switch (switch_on)
             {
             case 1:
@@ -217,7 +219,7 @@ int main()
             }break;
         }
 
-        } while (true);
-
+        }
+    } while (true);
 	return 0;
 }
