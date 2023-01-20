@@ -103,11 +103,17 @@ int main()
             SetConsoleTextAttribute(hConsole, 11);
             if (a < b)
             {
-                std::cout << "smaller number is:" << a << endl;
+                SetConsoleTextAttribute(hConsole, 12);
+                std::cout << a;
+                SetConsoleTextAttribute(hConsole, 11);
+                std::cout << " - is smaller" << endl;
             }
             else
             {
-                std::cout << "smaller number is:" << b << endl;
+                SetConsoleTextAttribute(hConsole, 12);
+                std::cout << b;
+                SetConsoleTextAttribute(hConsole, 11);
+                std::cout << " - is smaller" << endl;
 
             }
             system("pause");
@@ -150,12 +156,19 @@ int main()
             SetConsoleTextAttribute(hConsole, 11);
             if (a < b)
             {
-                std::cout << a << b;
+            
+
+                std::cout << ">>>";
+                SetConsoleTextAttribute(hConsole, 12);
+                std::cout << a << b << endl;
+                SetConsoleTextAttribute(hConsole, 11);
             }
             else if (a > b)
             {
-                std::cout << b << a;
-
+                std::cout << ">>>";
+                SetConsoleTextAttribute(hConsole, 12);
+                std::cout << b << a << endl;
+                SetConsoleTextAttribute(hConsole, 11);
             }
             else
             {
